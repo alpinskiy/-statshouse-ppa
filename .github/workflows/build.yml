@@ -135,5 +135,5 @@ jobs:
           git add --all
           git commit -m "${{needs.env.outputs.BUILD_VERSION}}"
           git push --set-upstream origin ${{github.run_number}}
-          gh pr create --title "Release ${{needs.env.outputs.BUILD_VERSION}}" --head "$BRANCH_NAME" --base "master"
+          gh pr create --title "Release ${{needs.env.outputs.BUILD_VERSION}}"
         working-directory: ppa
