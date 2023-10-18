@@ -134,6 +134,6 @@ jobs:
           reprepro -b debian includedeb bullseye $GITHUB_WORKSPACE/deb/*.deb
           git add --all
           git commit -m "${{needs.env.outputs.BUILD_VERSION}}"
-          git push --set-upstream origin ${{github.run_number}}
+          git push --set-upstream origin "${{needs.env.outputs.BUILD_VERSION}}"
           gh pr create --title "Release ${{needs.env.outputs.BUILD_VERSION}}"
         working-directory: ppa
