@@ -5,11 +5,3 @@ Architectures: amd64
 Components: main
 Description: Apt repository for project StatsHouse
 SignWith: ADB8C30E63F55C5599CAE9BAC7F90592A70AADC7
- 
-Origin: StatsHouse
-Label: StatsHouse
-Codename: buster
-Architectures: amd64
-Components: main
-Description: Apt repository for project StatsHouse
-SignWith: ADB8C30E63F55C5599CAE9BAC7F90592A70AADC7
