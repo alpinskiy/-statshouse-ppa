@@ -128,7 +128,8 @@ jobs:
           sudo apt-get update
           sudo DEBIAN_FRONTEND=noninteractive apt-get install -y reprepro
       - run: |
-          git config --global user.name "robot"
+          git config --global user.name "$GITHUB_ACTOR"
+          git config --global user.email ""
           git checkout -b "${{needs.env.outputs.BUILD_VERSION}}"
           reprepro -b debian includedeb bullseye $GITHUB_WORKSPACE/deb/*.deb
           git add --all
