@@ -1,0 +1,15 @@
+Package: statshouse
+Version: 1:1.0.0-beta1-745-gab674c5-bullseye
+Architecture: amd64
+Maintainer: Gregory Petrosyan <pgregory@pgregory.net>
+Installed-Size: 29763
+Homepage: https://github.com/VKCOM/statshouse
+Priority: optional
+Section: misc
+Filename: pool/main/s/statshouse/statshouse_1.0.0-beta1-745-gab674c5-bullseye_amd64.deb
+Size: 12847608
+SHA256: ef15499ba21c156a3965fc4d4f21554e852c52358f7beb2e81423562d4f69dcc
+SHA1: a069a6d31691450c251d4ddeb9bdb60c58f92f2c
+MD5sum: df93c9234c575fdd6c3cc6577c297128
+Description: statshouse provides the Agent daemon of the StatsHouse monitoring system.
+
