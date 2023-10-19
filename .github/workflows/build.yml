@@ -92,7 +92,7 @@ jobs:
       os_release: focal
     secrets: inherit
   pull_request:
-    needs: [env, debian, ubuntu]
+    needs: [env, debian, ubuntu_jammy, ubuntu_focal]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
