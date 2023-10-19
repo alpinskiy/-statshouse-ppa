@@ -1,0 +1,19 @@
+Origin: StatsHouse
+Label: StatsHouse
+Codename: buster
+Date: Thu, 19 Oct 2023 17:58:09 UTC
+Architectures: amd64
+Components: main
+Description: Apt repository for project StatsHouse
+MD5Sum:
+ e8c7c3e8332ddfb274ec7eb17f3a5ba2 1859 main/binary-amd64/Packages
+ 6725d67f8684f0a81037a87ee6e7bc5f 746 main/binary-amd64/Packages.gz
+ 380870c34a567486d1a7d5177449e2ff 124 main/binary-amd64/Release
+SHA1:
+ 8cd05c022a84edb59e285142c672be12899704d9 1859 main/binary-amd64/Packages
+ 3ecf89c1a5b210be9113cfdc4ee972f01d92511b 746 main/binary-amd64/Packages.gz
+ 7289a1a60ee8797669fb25ee37590b2ebaac36cc 124 main/binary-amd64/Release
+SHA256:
+ aa2fcdb9651e02609ee5b290932f16ba9598a92db559227999d72d8b5070bcc8 1859 main/binary-amd64/Packages
+ 8d0f13034356bbff10fe0e5045ca83c96cec22905548fcbab62ccf30d64db2e0 746 main/binary-amd64/Packages.gz
+ 5c4a39c4c9c289339cde5de92791f3492fca7d7de42fff66cc8a0f8d3ad27d46 124 main/binary-amd64/Release

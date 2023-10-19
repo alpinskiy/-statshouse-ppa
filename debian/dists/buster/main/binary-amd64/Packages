@@ -1,0 +1,48 @@
+Package: statshouse
+Version: 1:1.0.0-beta1-753-gcc567fa-buster
+Architecture: amd64
+Maintainer: Gregory Petrosyan <pgregory@pgregory.net>
+Installed-Size: 29450
+Homepage: https://github.com/VKCOM/statshouse
+Priority: optional
+Section: misc
+Filename: pool/main/s/statshouse/statshouse_1.0.0-beta1-753-gcc567fa-buster_amd64.deb
+Size: 13119728
+SHA256: 78611c73cd6ce0e7180b48b7b79afe0d570fa61f24d4f31326d819c5b6fa3caa
+SHA1: 6a7933ab02fca26c2031c20764cde3183326bc62
+MD5sum: 210389bef785be9706451b3ab5d12cd7
+Description: statshouse provides the Agent daemon of the StatsHouse monitoring system.
+
+Package: statshouse-api
+Source: statshouse
+Version: 1:1.0.0-beta1-753-gcc567fa-buster
+Architecture: amd64
+Maintainer: Gregory Petrosyan <pgregory@pgregory.net>
+Installed-Size: 31346
+Depends: libc6 (>= 2.28), gnuplot-nox, fonts-open-sans
+Homepage: https://github.com/VKCOM/statshouse
+Priority: optional
+Section: misc
+Filename: pool/main/s/statshouse/statshouse-api_1.0.0-beta1-753-gcc567fa-buster_amd64.deb
+Size: 8665712
+SHA256: 27d44fd34165970937e06d71b617dd09d70fce6e3fcce3a11982b3f439663499
+SHA1: 8b139719088d208d7a6da34d33e0b932eded30cf
+MD5sum: a8986e687a34efaa7f61a774f4b542db
+Description: statshouse-api provides HTTP API and frontend for StatsHouse.
+
+Package: statshouse-metadata
+Source: statshouse
+Version: 1:1.0.0-beta1-753-gcc567fa-buster
+Architecture: amd64
+Maintainer: Gregory Petrosyan <pgregory@pgregory.net>
+Installed-Size: 9128
+Homepage: https://github.com/VKCOM/statshouse
+Priority: optional
+Section: misc
+Filename: pool/main/s/statshouse/statshouse-metadata_1.0.0-beta1-753-gcc567fa-buster_amd64.deb
+Size: 5218688
+SHA256: e7d68cce6671c720a0637f3dc60cf19cec4933872741f712fbd2009c9b5c74ac
+SHA1: 42bc3cdfbd99477718a6af4ddee2172ff95875f5
+MD5sum: 0572f230c1e0ac7d7e6762419f7625cd
+Description: statshouse-metadata provides storage of metadata for StatsHouse.
+

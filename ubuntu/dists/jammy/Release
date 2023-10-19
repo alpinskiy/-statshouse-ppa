@@ -1,0 +1,19 @@
+Origin: StatsHouse
+Label: StatsHouse
+Codename: jammy
+Date: Thu, 19 Oct 2023 17:58:09 UTC
+Architectures: amd64
+Components: main
+Description: Apt repository for project StatsHouse
+MD5Sum:
+ 123595b2d3feec106727f569e2c68711 1853 main/binary-amd64/Packages
+ 4ecdfde7a8e016db7b2bf9b101b81f5e 742 main/binary-amd64/Packages.gz
+ 380870c34a567486d1a7d5177449e2ff 124 main/binary-amd64/Release
+SHA1:
+ 01f2823532810f8390af41c0c8ab7cec50d51578 1853 main/binary-amd64/Packages
+ 59d043969b56e31c42ad41da995f2c36cfb7b0f8 742 main/binary-amd64/Packages.gz
+ 7289a1a60ee8797669fb25ee37590b2ebaac36cc 124 main/binary-amd64/Release
+SHA256:
+ dab6d8a3e39638cb04fc8c71f178f00e8ccd5ed976eb6d26c09528b55514ab2a 1853 main/binary-amd64/Packages
+ f1901beae6469129c329c4da48dcbd0774f72a5a287b9503ef0654a4ab94e3e4 742 main/binary-amd64/Packages.gz
+ 5c4a39c4c9c289339cde5de92791f3492fca7d7de42fff66cc8a0f8d3ad27d46 124 main/binary-amd64/Release
