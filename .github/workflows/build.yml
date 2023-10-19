@@ -48,7 +48,7 @@ jobs:
         make build-sh build-sh-metadata build-sh-api build-sh-grafana
     - uses: actions/upload-artifact@v3
       with:
-        name: statshouse-${{ matrix.debian_release }}-bin
+        name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-bin-${{ matrix.debian_release }}
         path: target
   front:
     needs: env
@@ -65,14 +65,14 @@ jobs:
         make build-sh-ui
     - uses: actions/upload-artifact@v3
       with:
-        name: statshouse-ui
+        name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-ui
         path: |
           cmd/statshouse-api/build
           .dummy_preserves_directory_structure
     - run: make build-grafana-ui
     - uses: actions/upload-artifact@v3
       with:
-        name: statshouse-ui
+        name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-ui
         path: |
           grafana-plugin-ui/dist
           .dummy_preserves_directory_structure
@@ -95,10 +95,11 @@ jobs:
         fetch-depth: 0
     - uses: actions/download-artifact@master
       with:
-        name: statshouse-${{ matrix.debian_release }}-bin
+        name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-bin-${{ matrix.debian_release }}
+        path: target
     - uses: actions/download-artifact@master
       with:
-        name: statshouse-ui
+        name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-ui
     - working-directory: build
       run: |
         rm -f changelog
@@ -110,7 +111,7 @@ jobs:
         mv *.deb ${{ matrix.debian_release }}
     - uses: actions/upload-artifact@v3
       with:
-        name: statshouse-deb
+        name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-deb
         path: |
           ${{ matrix.debian_release }}/*
           .dummy_preserves_directory_structure
@@ -125,7 +126,7 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
       - uses: actions/download-artifact@master
         with:
-          name: statshouse-deb
+          name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-deb
           path: deb
       - run: echo -n "${{ secrets.GPG_SIGNING_KEY }}" | base64 --decode | gpg --batch --import
       - run: |
