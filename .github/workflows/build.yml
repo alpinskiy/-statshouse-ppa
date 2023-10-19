@@ -57,7 +57,7 @@ jobs:
       matrix:
         debian_release: [buster, bullseye]
     needs: [env, front]
-    uses: alpinskiy/statshouse-ppa/.github/workflows/build_debian.yml@main
+    uses: alpinskiy/statshouse-ppa/.github/workflows/build_debian.yml@master
     with:
       BUILD_TIME: ${{needs.env.outputs.BUILD_TIME}}
       BUILD_COMMIT: ${{needs.env.outputs.BUILD_COMMIT}}
