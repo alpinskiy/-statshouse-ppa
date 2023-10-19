@@ -79,7 +79,7 @@ jobs:
         make build-sh build-sh-metadata build-sh-api build-sh-grafana
     - uses: actions/upload-artifact@v3
       with:
-        name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-bin-${{ matrix.debian_release }}
+        name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-${{ matrix.debian_release }}_amd64-bin
         path: target
   deb:
     needs: [env, back, front]
@@ -101,7 +101,7 @@ jobs:
         fetch-depth: 0
     - uses: actions/download-artifact@master
       with:
-        name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-bin-${{ matrix.debian_release }}
+        name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-${{ matrix.debian_release }}_amd64-bin
         path: target
     - uses: actions/download-artifact@master
       with:
@@ -117,7 +117,7 @@ jobs:
         mv *.deb ${{ matrix.debian_release }}
     - uses: actions/upload-artifact@v3
       with:
-        name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-deb
+        name: statshouse-${{needs.env.outputs.BUILD_VERSION}}_amd64-deb
         path: |
           ${{ matrix.debian_release }}/*
           .dummy_preserves_directory_structure
@@ -132,7 +132,7 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
       - uses: actions/download-artifact@master
         with:
-          name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-deb
+          name: statshouse-${{needs.env.outputs.BUILD_VERSION}}_amd64-deb
           path: deb
       - run: echo -n "${{ secrets.GPG_SIGNING_KEY }}" | base64 --decode | gpg --batch --import
       - run: |
