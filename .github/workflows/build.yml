@@ -52,91 +52,33 @@ jobs:
         path: |
           grafana-plugin-ui/dist
           .dummy_preserves_directory_structure
-  back:
+  debian:
+    strategy:
+      matrix:
+        debian_release: [buster, bullseye]
     needs: [env, front]
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        debian_release: [buster, bullseye]
-    container:
-      image: golang:1.19-${{ matrix.debian_release }}
-    steps:
-    - uses: actions/checkout@v4
-      with:
-        repository: VKCOM/statshouse
-        ref: ${{needs.env.outputs.BUILD_COMMIT}}
-        fetch-depth: 0
-    - uses: actions/download-artifact@master
-      with:
-        name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-ui
-    - run: |
-        BUILD_TIME=${{needs.env.outputs.BUILD_TIME}}
-        BUILD_COMMIT=${{needs.env.outputs.BUILD_COMMIT}}
-        BUILD_COMMIT_TS=${{needs.env.outputs.BUILD_COMMIT_TS}}
-        BUILD_MACHINE=$(uname -n -m -r -s)
-        BUILD_VERSION=${{needs.env.outputs.BUILD_VERSION}}
-        cp -r statshouse-ui/build cmd/statshouse-api/
-        make build-sh build-sh-metadata build-sh-api build-sh-grafana
-    - uses: actions/upload-artifact@v3
-      with:
-        name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-${{ matrix.debian_release }}_amd64-bin
-        path: target
-  deb:
-    needs: [env, back, front]
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        debian_release: [buster, bullseye]
-    container:
-      image: debian:${{ matrix.debian_release }}
-    steps:
-    - run: |
-        apt-get update
-        DEBIAN_FRONTEND=noninteractive apt-get install -y devscripts build-essential dh-exec
-        rm -rf /var/lib/apt/lists/*
-    - uses: actions/checkout@v4
-      with:
-        repository: VKCOM/statshouse
-        ref: ${{needs.env.outputs.BUILD_COMMIT}}
-        fetch-depth: 0
-    - uses: actions/download-artifact@master
-      with:
-        name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-${{ matrix.debian_release }}_amd64-bin
-        path: target
-    - uses: actions/download-artifact@master
-      with:
-        name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-ui
-    - working-directory: build
-      run: |
-        rm -f changelog
-        VERSION=1:${{needs.env.outputs.BUILD_VERSION}}-${{ matrix.debian_release }}
-        dch --create --distribution stable --package statshouse --newversion "$VERSION" "up to version $VERSION"
-        debuild --no-lintian -us -uc -b
-    - run: |
-        mkdir ${{ matrix.debian_release }}
-        mv *.deb ${{ matrix.debian_release }}
-    - uses: actions/upload-artifact@v3
-      with:
-        name: statshouse-${{needs.env.outputs.BUILD_VERSION}}_amd64-deb
-        path: |
-          ${{ matrix.debian_release }}/statshouse_*
-          ${{ matrix.debian_release }}/statshouse-api_*
-          ${{ matrix.debian_release }}/statshouse-metadata_*
-          .dummy_preserves_directory_structure
-  pr:
-    needs: [env, deb]
+    uses: alpinskiy/statshouse-ppa/.github/workflows/build_debian.yml@main
+    with:
+      BUILD_TIME: ${{needs.env.outputs.BUILD_TIME}}
+      BUILD_COMMIT: ${{needs.env.outputs.BUILD_COMMIT}}
+      BUILD_COMMIT_TS: ${{needs.env.outputs.BUILD_COMMIT_TS}}
+      BUILD_VERSION: ${{needs.env.outputs.BUILD_VERSION}}
+      debian_release: ${{matrix.debian_release}}
+    secrets: inherit
+  pull_request:
+    needs: [env, debian]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
         with:
           fetch-depth: 0
           path: ppa
-          token: ${{ secrets.ACCESS_TOKEN }}
+          token: ${{secrets.ACCESS_TOKEN}}
       - uses: actions/download-artifact@master
         with:
           name: statshouse-${{needs.env.outputs.BUILD_VERSION}}_amd64-deb
           path: deb
-      - run: echo -n "${{ secrets.GPG_SIGNING_KEY }}" | base64 --decode | gpg --batch --import
+      - run: echo -n "${{secrets.GPG_SIGNING_KEY}}" | base64 --decode | gpg --batch --import
       - run: |
           sudo apt-get update
           sudo DEBIAN_FRONTEND=noninteractive apt-get install -y reprepro
@@ -151,5 +93,5 @@ jobs:
         working-directory: ppa
       - run: gh pr create --title "Release ${{needs.env.outputs.BUILD_VERSION}}" --body ""
         env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{secrets.ACCESS_TOKEN}}
         working-directory: ppa
