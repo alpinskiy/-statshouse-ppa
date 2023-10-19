@@ -20,6 +20,7 @@ on:
       build_container:
         required: false
         type: string
+        default: '{"image":null}'
       os_name:
         required: true
         type: string
@@ -37,7 +38,7 @@ jobs:
           ref: ${{inputs.build_commit}}
           fetch-depth: 0
       - uses: actions/setup-go@v4
-        if: inputs.build_container == ''
+        if: inputs.build_container == '{"image":null}'
         with:
           go-version: '1.19'
       - uses: actions/download-artifact@master

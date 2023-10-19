@@ -63,7 +63,7 @@ jobs:
       build_commit: ${{needs.env.outputs.BUILD_COMMIT}}
       build_commit_ts: ${{needs.env.outputs.BUILD_COMMIT_TS}}
       build_version: ${{needs.env.outputs.BUILD_VERSION}}
-      build_container: '{"image": "golang:1.19-${{matrix.debian_release}}"}'
+      build_container: '{"image": "golang:1.19-${{matrix.release}}"}'
       os_name: 'debian'
       os_release: ${{matrix.release}}
     secrets: inherit
