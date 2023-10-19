@@ -61,9 +61,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          apt-get update
-          DEBIAN_FRONTEND=noninteractive apt-get install -y devscripts build-essential dh-exec
-          rm -rf /var/lib/apt/lists/*
+          sudo apt-get update
+          DEBIAN_FRONTEND=noninteractive sudo apt-get install -y devscripts build-essential dh-exec
+          sudo rm -rf /var/lib/apt/lists/*
       - uses: actions/checkout@v4
         with:
           repository: VKCOM/statshouse
