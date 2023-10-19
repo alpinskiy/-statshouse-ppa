@@ -121,7 +121,7 @@ jobs:
         path: |
           ${{ matrix.debian_release }}/*
           .dummy_preserves_directory_structure
-  publish:
+  pr:
     needs: [env, deb]
     runs-on: ubuntu-latest
     steps:
@@ -129,7 +129,7 @@ jobs:
         with:
           fetch-depth: 0
           path: ppa
-          token: ${{ secrets.ACCESS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/download-artifact@master
         with:
           name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-deb
@@ -145,6 +145,9 @@ jobs:
           for d in $GITHUB_WORKSPACE/deb/*/ ; do reprepro -b debian includedeb $(basename $d) $d*.deb; done
           git add --all
           git commit -m "${{needs.env.outputs.BUILD_VERSION}}"
-          git push --set-upstream origin "${{needs.env.outputs.BUILD_VERSION}}"
-          gh pr create --title "Release ${{needs.env.outputs.BUILD_VERSION}}"
+          git push --set-upstream origin "${{needs.env.outputs.BUILD_VERSION}}"          
+        working-directory: ppa
+      - run: gh pr create --title "Release ${{needs.env.outputs.BUILD_VERSION}}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         working-directory: ppa
