@@ -4,35 +4,35 @@ Hash: SHA512
 Origin: StatsHouse
 Label: StatsHouse
 Codename: bullseye
-Date: Wed, 18 Oct 2023 12:41:31 UTC
+Date: Thu, 19 Oct 2023 12:20:38 UTC
 Architectures: amd64
 Components: main
 Description: Apt repository for project StatsHouse
 MD5Sum:
- d41d8cd98f00b204e9800998ecf8427e 0 main/binary-amd64/Packages
- 7029066c27ac6f5ef18d660d5741979a 20 main/binary-amd64/Packages.gz
+ 915f77fcacc2fa7d48b7be4512652b4f 1871 main/binary-amd64/Packages
+ d9734dd8bc9cf7e5e1955361aff1333d 742 main/binary-amd64/Packages.gz
  380870c34a567486d1a7d5177449e2ff 124 main/binary-amd64/Release
 SHA1:
- da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-amd64/Packages
- 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-amd64/Packages.gz
+ 712aa9c11494a662784abc63f64da071b751307d 1871 main/binary-amd64/Packages
+ 068923d64c6a0a5d2e3a8fdf781b70a31bdf5d6c 742 main/binary-amd64/Packages.gz
  7289a1a60ee8797669fb25ee37590b2ebaac36cc 124 main/binary-amd64/Release
 SHA256:
- e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-amd64/Packages
- 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-amd64/Packages.gz
+ e6f2d34474f565c2ea5e2b2bcfac35875c254aba4a7e89e62d329a53642b3ce8 1871 main/binary-amd64/Packages
+ 6adea82e649b623f8b052c9a7cfecabfb73f980430b82067c07a0efd3d1f10fd 742 main/binary-amd64/Packages.gz
  5c4a39c4c9c289339cde5de92791f3492fca7d7de42fff66cc8a0f8d3ad27d46 124 main/binary-amd64/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEELUl4RjpVk66Z84o9regZJFtITSgFAmUv0oUACgkQregZJFtI
-TSgFgA//XCDiGEJV/tJKdZpwjaDMybvZSj9lplOqugCF65UXlUNWnBEO6zt+Aelq
-5COC2aapW3guMyxjnIv78s0iQEqm6mIUQikpggwp4gYiQHvrMQ9v68CPZaBxtJ4Y
-t+hbyzLvdcsQoseE2ocPoDdTfsAlcDag4DNu/Gcawz9SGf+yc+0t+gpswVsuyoQq
-h7sACugDL0AK6YscqY1esVL4Z56SydcvPq94m26IScNHOeObnDkdU71+GrgQ6O5+
-ZAA5MgFLeL5K0yx8Bf24wtG8j9k3fpsMZ8joq8eEmKiI45vJjuxTYbP6kRWLT0m/
-NgBGZ2k4QCjUUjQwSC+pv10gQlhxwRvbBfm8VD9LgAmjAjlu99fedsZvbHrJ7zn8
-/o8ATHX4WjWe72E1A/A2A6ouwWb41jhs8kMizruiiS0MpThngkRAgiKUIsODHACy
-wvZWsPchHZh4WmfdElcAOyHrd3KO5Aw1vXNchVZMvD9y50vc/uRKnb81YJM0x9kK
-TfYBH3bRbWp3sSyVzmIGssPQYGRFnXy6lTdHT+PtjNH99gsucRKZ98wL/+EQ78vN
-UUflDXjzds3WjI/CZFTpEwGppDUFVJQtFmr5z7Ma58qphMBTJ4ThqRzJajkpD/NC
-7uzb/8SKB9CmbcQZUmcsqt2kgGCKW7Fp4fzn9F+nFIPuxi0hIvk=
-=OdVW
+iQIzBAEBCgAdFiEELUl4RjpVk66Z84o9regZJFtITSgFAmUxHxYACgkQregZJFtI
+TSgtcxAAhN2y0NlZg54gnTTXGba+Q1Ilolb6FtUtMAkfkOIy1yoih0Kj+P+KrZXe
+AQXnq/PeuQPQ//5n+HfMSK899kED04AUtxVpzc1DBbMWTOk+i7xmukQ23JWv80xu
+rqBqyQl2A3Xbu2zC8TaNYNRZZPW+wVf2t8NnWeIlxjPBRha+T7LFXoaN55oMiHdP
+mfArFjjW4zrr2ZEd4OokQKnyzKyPIbRE2fnkSxXILYpneb2sMcvPuitAWPBK3M8B
+CsQ4vHynIhvdHbhBtYToqM6uAvZuyWM7BuU1bR4veRyMXHOuomOEv3i71dKCe0Qr
+pbwvQaTdle5K611leRD19UQMf/0H613Y+oJeE3G0r2EmKBu0NXh8NkU2WTrZcvsr
+ygb5oEEyRw6c5xwZEceYZM0vYrW3+HAc7OcZXPbdiwoParB26jmSNlddhle8sOAn
+9dyUGs2o4YdQOrCFzpeW0GAwCDUeDtKoHDpTg/f6aWr3LlTfLcCYF6N3POAkzcay
+y2OFx1lyHnIoYVkP0aBkCGNYEkY5T7mY6Ctt7JWm4KlhUipPlFrVtnGjhLjUU3i1
+6uZmGJogYYJlOx4baya9kVElZm6HOwJbKGbm6K461u44Z5V7iUPaQkChUsxo7ZcL
+vKevKsHS+odEvGyzwue519Wr1HdUJ6sfBQWP6ry5GVXHjedhU40=
+=uE0C
 -----END PGP SIGNATURE-----
