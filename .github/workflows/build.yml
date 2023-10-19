@@ -82,7 +82,7 @@ jobs:
       os_release: ${{matrix.release}}
     secrets: inherit
   pull_request:
-    needs: [env, debian]
+    needs: [env, debian, ubuntu]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
