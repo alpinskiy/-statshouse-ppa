@@ -142,7 +142,7 @@ jobs:
           git config --global user.name "$GITHUB_ACTOR"
           git config --global user.email ""
           git checkout -b "${{needs.env.outputs.BUILD_VERSION}}"
-          for d in $GITHUB_WORKSPACE/deb/*/ ; do reprepro -b debian includedeb (basename $d) $d*.deb; done
+          for d in $GITHUB_WORKSPACE/deb/*/ ; do reprepro -b debian includedeb $(basename $d) $d*.deb; done
           git add --all
           git commit -m "${{needs.env.outputs.BUILD_VERSION}}"
           git push --set-upstream origin "${{needs.env.outputs.BUILD_VERSION}}"
