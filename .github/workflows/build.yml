@@ -129,7 +129,7 @@ jobs:
         with:
           fetch-depth: 0
           path: ppa
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ACCESS_TOKEN }}
       - uses: actions/download-artifact@master
         with:
           name: statshouse-${{needs.env.outputs.BUILD_VERSION}}-deb
