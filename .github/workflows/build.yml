@@ -55,15 +55,31 @@ jobs:
   debian:
     strategy:
       matrix:
-        debian_release: [buster, bullseye]
+        release: [buster, bullseye]
     needs: [env, front]
-    uses: alpinskiy/statshouse-ppa/.github/workflows/build_debian.yml@master
+    uses: alpinskiy/statshouse-ppa/.github/workflows/build_deb.yml@master
     with:
-      BUILD_TIME: ${{needs.env.outputs.BUILD_TIME}}
-      BUILD_COMMIT: ${{needs.env.outputs.BUILD_COMMIT}}
-      BUILD_COMMIT_TS: ${{needs.env.outputs.BUILD_COMMIT_TS}}
-      BUILD_VERSION: ${{needs.env.outputs.BUILD_VERSION}}
-      debian_release: ${{matrix.debian_release}}
+      build_time: ${{needs.env.outputs.BUILD_TIME}}
+      build_commit: ${{needs.env.outputs.BUILD_COMMIT}}
+      build_commit_ts: ${{needs.env.outputs.BUILD_COMMIT_TS}}
+      build_version: ${{needs.env.outputs.BUILD_VERSION}}
+      build_container: '{"image": "golang:1.19-${{matrix.debian_release}}"}'
+      os_name: 'debian'
+      os_release: ${{matrix.release}}
+    secrets: inherit
+  ubuntu:
+    strategy:
+      matrix:
+        release: [jammy]
+    needs: [env, front]
+    uses: alpinskiy/statshouse-ppa/.github/workflows/build_deb.yml@master
+    with:
+      build_time: ${{needs.env.outputs.BUILD_TIME}}
+      build_commit: ${{needs.env.outputs.BUILD_COMMIT}}
+      build_commit_ts: ${{needs.env.outputs.BUILD_COMMIT_TS}}
+      build_version: ${{needs.env.outputs.BUILD_VERSION}}
+      os_name: ubuntu
+      os_release: ${{matrix.release}}
     secrets: inherit
   pull_request:
     needs: [env, debian]
