@@ -67,10 +67,7 @@ jobs:
       os_name: 'debian'
       os_release: ${{matrix.release}}
     secrets: inherit
-  ubuntu:
-    strategy:
-      matrix:
-        release: [jammy]
+  ubuntu_jammy:
     needs: [env, front]
     uses: alpinskiy/statshouse-ppa/.github/workflows/build_deb.yml@master
     with:
@@ -78,8 +75,21 @@ jobs:
       build_commit: ${{needs.env.outputs.BUILD_COMMIT}}
       build_commit_ts: ${{needs.env.outputs.BUILD_COMMIT_TS}}
       build_version: ${{needs.env.outputs.BUILD_VERSION}}
+      build_machine: ubuntu-22.04
       os_name: ubuntu
-      os_release: ${{matrix.release}}
+      os_release: jammy
+    secrets: inherit
+  ubuntu_focal:
+    needs: [env, front]
+    uses: alpinskiy/statshouse-ppa/.github/workflows/build_deb.yml@master
+    with:
+      build_time: ${{needs.env.outputs.BUILD_TIME}}
+      build_commit: ${{needs.env.outputs.BUILD_COMMIT}}
+      build_commit_ts: ${{needs.env.outputs.BUILD_COMMIT_TS}}
+      build_version: ${{needs.env.outputs.BUILD_VERSION}}
+      build_machine: ubuntu-20.04
+      os_name: ubuntu
+      os_release: focal
     secrets: inherit
   pull_request:
     needs: [env, debian, ubuntu]
