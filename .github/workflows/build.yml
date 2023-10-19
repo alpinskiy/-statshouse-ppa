@@ -102,10 +102,10 @@ jobs:
           git config --global user.name "$GITHUB_ACTOR"
           git config --global user.email ""
           git checkout -b "${{needs.env.outputs.BUILD_VERSION}}"
-          for d in $GITHUB_WORKSPACE/input/* ; \
-            for r in $GITHUB_WORKSPACE/input/$d/* ; \
+          for d in $GITHUB_WORKSPACE/input/*; \
+            do for r in $GITHUB_WORKSPACE/input/$d/*; \
               do reprepro -b $d includedeb $r $GITHUB_WORKSPACE/input/$d/$r/*.deb; \
-            done \
+            done; \
           done
           git add --all
           git commit -m "${{needs.env.outputs.BUILD_VERSION}}"
