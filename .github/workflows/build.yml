@@ -95,8 +95,7 @@ jobs:
         fetch-depth: 0
     - uses: actions/download-artifact@master
       with:
-        name: bin-${{ matrix.debian_release }}
-        path: target
+        name: statshouse-${{ matrix.debian_release }}-bin
     - uses: actions/download-artifact@master
       with:
         name: statshouse-ui
