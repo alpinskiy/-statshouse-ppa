@@ -103,8 +103,8 @@ jobs:
           git config --global user.email ""
           git checkout -b "${{needs.env.outputs.BUILD_VERSION}}"
           for d in $GITHUB_WORKSPACE/input/*; \
-            do for r in $GITHUB_WORKSPACE/input/$d/*; \
-              do reprepro -b $d includedeb $r $GITHUB_WORKSPACE/input/$d/$r/*.deb; \
+            do for r in $d/*; \
+              do reprepro -b $(basename $d) includedeb $(basename $r) $r/*.deb; \
             done; \
           done
           git add --all
