@@ -1,0 +1,114 @@
+Package: statshouse
+Version: 1:1.0.0-beta1-749-gd86fd62-bullseye
+Architecture: amd64
+Maintainer: Gregory Petrosyan <pgregory@pgregory.net>
+Installed-Size: 29763
+Homepage: https://github.com/VKCOM/statshouse
+Priority: optional
+Section: misc
+Filename: pool/main/s/statshouse/statshouse_1.0.0-beta1-749-gd86fd62-bullseye_amd64.deb
+Size: 12848844
+SHA256: 41054793743c4cea5cae446b09526e21e926a3d2bd4e91e042664a3cbea37a19
+SHA1: 6b2c83c07cf079a8e82e0c522185116ecfba8ef7
+MD5sum: 18e84120985e81d519e4aec4e8750c5e
+Description: statshouse provides the Agent daemon of the StatsHouse monitoring system.
+
+Package: statshouse-agg
+Source: statshouse
+Version: 1:1.0.0-beta1-749-gd86fd62-bullseye
+Architecture: amd64
+Maintainer: Gregory Petrosyan <pgregory@pgregory.net>
+Installed-Size: 29763
+Homepage: https://github.com/VKCOM/statshouse
+Priority: optional
+Section: misc
+Filename: pool/main/s/statshouse/statshouse-agg_1.0.0-beta1-749-gd86fd62-bullseye_amd64.deb
+Size: 12849680
+SHA256: 3837c77fdf41dfa7f2853a327da3e6d46cff0053affe5724ff8dcbd4465c4719
+SHA1: 51636362f435286c4add892c5a4e68de42e3dcbd
+MD5sum: a31e1ddf388924dd629492c16cda9529
+Description: statshouse-agg provides the Aggregator daemon of the StatsHouse monitoring system.
+
+Package: statshouse-api
+Source: statshouse
+Version: 1:1.0.0-beta1-749-gd86fd62-bullseye
+Architecture: amd64
+Maintainer: Gregory Petrosyan <pgregory@pgregory.net>
+Installed-Size: 31413
+Depends: libc6 (>= 2.28), gnuplot-nox, fonts-open-sans
+Homepage: https://github.com/VKCOM/statshouse
+Priority: optional
+Section: misc
+Filename: pool/main/s/statshouse/statshouse-api_1.0.0-beta1-749-gd86fd62-bullseye_amd64.deb
+Size: 7970072
+SHA256: e3abe7f4b1a81d9b10bb085c087cd327f0f36d44f2cdecc194243e99e9426577
+SHA1: e0a3c2a0476c131a9ad552f37bda2ad1748456f6
+MD5sum: 3de1847a2817c00b5ff08338986fbca4
+Description: statshouse-api provides HTTP API and frontend for StatsHouse.
+
+Package: statshouse-api-dbgsym
+Source: statshouse
+Version: 1:1.0.0-beta1-749-gd86fd62-bullseye
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Gregory Petrosyan <pgregory@pgregory.net>
+Installed-Size: 11065
+Depends: statshouse-api (= 1:1.0.0-beta1-749-gd86fd62-bullseye)
+Priority: optional
+Section: debug
+Filename: pool/main/s/statshouse/statshouse-api-dbgsym_1.0.0-beta1-749-gd86fd62-bullseye_amd64.deb
+Size: 8745764
+SHA256: b278ea213b4be69ab68bc20cc090f3ba2025c95d935cc7786c91b28bca136288
+SHA1: 9e5d8f943c0a0dd887e411b7a86c567ee3e1ba12
+MD5sum: a86c29b7227049497e5972cc647c6a25
+Description: debug symbols for statshouse-api
+Build-Ids: 96a7fb3228acda9d0cfd48a7932551e96de35607
+
+Package: statshouse-grafana-plugin
+Source: statshouse
+Version: 1:1.0.0-beta1-749-gd86fd62-bullseye
+Architecture: amd64
+Maintainer: Gregory Petrosyan <pgregory@pgregory.net>
+Installed-Size: 36585
+Homepage: https://github.com/VKCOM/statshouse
+Priority: optional
+Section: misc
+Filename: pool/main/s/statshouse/statshouse-grafana-plugin_1.0.0-beta1-749-gd86fd62-bullseye_amd64.deb
+Size: 15209700
+SHA256: ebbf5bd5afda50edf48f16b87f31fe885c6d35682b5ae6e4260c9677bf57a276
+SHA1: 1127671b4351d1c5effe26f37456fde7b563a037
+MD5sum: 19316b6ed5e007ed48e6837cf5be5022
+Description: statshouse-grafana-plugin provides StatsHouse data source plugin for Grafana.
+
+Package: statshouse-igp
+Source: statshouse
+Version: 1:1.0.0-beta1-749-gd86fd62-bullseye
+Architecture: amd64
+Maintainer: Gregory Petrosyan <pgregory@pgregory.net>
+Installed-Size: 29763
+Homepage: https://github.com/VKCOM/statshouse
+Priority: optional
+Section: misc
+Filename: pool/main/s/statshouse/statshouse-igp_1.0.0-beta1-749-gd86fd62-bullseye_amd64.deb
+Size: 12849688
+SHA256: 03db8267beec9dccc330f98d199887c858caaa37ecc91ec5956e0536455d376e
+SHA1: ead67c50cad67e876cd523a92a98ba0d877a57db
+MD5sum: 2527bba867ef1aaf7bbc8ae4adb1a221
+Description: statshouse-igp provides the Ingress Proxy daemon of the StatsHouse monitoring system.
+
+Package: statshouse-metadata
+Source: statshouse
+Version: 1:1.0.0-beta1-749-gd86fd62-bullseye
+Architecture: amd64
+Maintainer: Gregory Petrosyan <pgregory@pgregory.net>
+Installed-Size: 9142
+Homepage: https://github.com/VKCOM/statshouse
+Priority: optional
+Section: misc
+Filename: pool/main/s/statshouse/statshouse-metadata_1.0.0-beta1-749-gd86fd62-bullseye_amd64.deb
+Size: 5036220
+SHA256: c55c9fc307e8d607f542ff9ab1935233f2a860e0c242a9f9de41ec8d228c5ef5
+SHA1: f025ecceeeced279142f7e4a0e3316d69029f17c
+MD5sum: e75dfc27397d1014bcf004efe882d607
+Description: statshouse-metadata provides storage of metadata for StatsHouse.
+
