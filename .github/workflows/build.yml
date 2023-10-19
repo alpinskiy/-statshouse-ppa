@@ -57,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        debian_release: [bullseye]
+        debian_release: [buster, bullseye]
     container:
       image: golang:1.19-${{ matrix.debian_release }}
     steps:
@@ -86,7 +86,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        debian_release: [bullseye]
+        debian_release: [buster, bullseye]
     container:
       image: debian:${{ matrix.debian_release }}
     steps:
@@ -119,7 +119,9 @@ jobs:
       with:
         name: statshouse-${{needs.env.outputs.BUILD_VERSION}}_amd64-deb
         path: |
-          ${{ matrix.debian_release }}/*
+          ${{ matrix.debian_release }}/statshouse_*
+          ${{ matrix.debian_release }}/statshouse-api_*
+          ${{ matrix.debian_release }}/statshouse-metadata_*
           .dummy_preserves_directory_structure
   pr:
     needs: [env, deb]
