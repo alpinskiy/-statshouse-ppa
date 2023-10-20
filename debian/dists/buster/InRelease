@@ -1,0 +1,38 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Origin: StatsHouse
+Label: StatsHouse
+Codename: buster
+Date: Thu, 19 Oct 2023 18:27:46 UTC
+Architectures: amd64
+Components: main
+Description: Apt repository for project StatsHouse
+MD5Sum:
+ be4cbbb8e9d01436143cadecd8a741a6 1859 main/binary-amd64/Packages
+ c1a5ff42e10160f73c0c70790426050d 742 main/binary-amd64/Packages.gz
+ 380870c34a567486d1a7d5177449e2ff 124 main/binary-amd64/Release
+SHA1:
+ 0d580af569f6bc0e58df4682c84fbc14f37f9156 1859 main/binary-amd64/Packages
+ bf42da1aa70b2ebfecea8c1bc733f9fbdc51f721 742 main/binary-amd64/Packages.gz
+ 7289a1a60ee8797669fb25ee37590b2ebaac36cc 124 main/binary-amd64/Release
+SHA256:
+ 862aa8475372b6ab75245a43e9608eecbf52db873d3d267a80e48d644a8dda1a 1859 main/binary-amd64/Packages
+ ebc634f1c680fbd0aacff0660c1856af09eee89c7707abe64a9adc5f6da1b59a 742 main/binary-amd64/Packages.gz
+ 5c4a39c4c9c289339cde5de92791f3492fca7d7de42fff66cc8a0f8d3ad27d46 124 main/binary-amd64/Release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEELUl4RjpVk66Z84o9regZJFtITSgFAmUxdSIACgkQregZJFtI
+TSjvxA/+OLAITpJ9MiWhRAsFyqVqfRpv5VnIdCdAwozWAsdgrti/gM8/ZmcwpyUS
+BR+XApsYJR9RiRDrjQempqhdbJoJI9xa2w//ZfikvQ6aUJsOJ/DauE38/4vP/Wox
+Z60hMwRAAT7Z5vu390DiwMmJEgPy1E3NIMq2z6Z9lPC8Ey6b8xnH7WMEtTLS6dHM
+W81JPhZNsvEk87rj3mwQqffGk8kGWJTJp/np8In21YD83sz+WVq6OtsKaFaCoMtr
+T/aehDZ3cGX/ZZbooTeRczQ4YKmo92Z5fcYepbqs82JvKUq497iY9Wu1HNOAGqsc
+KCogLyOsXSJ4ZGxte7lswWGcIBYaiXG9A3IFKvGG5JN4KJleyL8j08pi64+bGZEq
+7ythwWw09qgOE/wl6CFew3L0nay2XLTfZv60CpQImgZjgG/nMReRdMoqm2ziY+lF
+i37viIfZPYfArPhtzc1Yc04Zha+6OTnB3ND1NACC2Ql1fwYWhSt+hHB8eIj3K/Sb
+Bn/VRekHvQqrxbh3JZb6krMTzAI1si3Z+ckiTJBN7QLOQT/o2sUzF/9GX/T2HVWw
+Wua416jW1xRWcT8kOH7iMiZh33NNtA2x5UvZlwuf8g35bajAsy0gLk7eci0NAGyU
+QIYuTDn6cMIm8gDiufY6jsNtZHwMmQ7IU1XKe/55wQZYPRr2Lx4=
+=cNL3
+-----END PGP SIGNATURE-----
