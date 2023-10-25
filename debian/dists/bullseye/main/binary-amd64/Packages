@@ -1,48 +1,50 @@
 Package: statshouse
-Version: 1:1.0.0-beta1-753-gcc567fa-bullseye
+Version: 1:1.0.0-beta1-767-g3fed190-bullseye
 Architecture: amd64
 Maintainer: Gregory Petrosyan <pgregory@pgregory.net>
-Installed-Size: 29763
+Installed-Size: 20729
+Depends: libc6 (>= 2.28)
 Homepage: https://github.com/VKCOM/statshouse
 Priority: optional
 Section: misc
-Filename: pool/main/s/statshouse/statshouse_1.0.0-beta1-753-gcc567fa-bullseye_amd64.deb
-Size: 13399580
-SHA256: 15bc917d01df2a2084bf865e18c6a5aed408881720406f7c335ae7cadb789e4a
-SHA1: e803ebe60a9d556da22556fea380b5e29f66479d
-MD5sum: 15b9ba23b07ee505187e55389b6577bc
-Description: statshouse provides the Agent daemon of the StatsHouse monitoring system.
+Filename: pool/main/s/statshouse/statshouse_1.0.0-beta1-767-g3fed190-bullseye_amd64.deb
+Size: 6006732
+SHA256: e879dfc624eaa42a7d8bb3695937fe0234465908ae8e6d8c89beb5b3176e0d0e
+SHA1: 03dc785664d22dfd5144ca2537e33f3c3d05b8d6
+MD5sum: 2b60a1f9129de7dc01e9fdc3c6e11420
+Description: statshouse provides the main daemon of the StatsHouse monitoring system.
 
 Package: statshouse-api
 Source: statshouse
-Version: 1:1.0.0-beta1-753-gcc567fa-bullseye
+Version: 1:1.0.0-beta1-767-g3fed190-bullseye
 Architecture: amd64
 Maintainer: Gregory Petrosyan <pgregory@pgregory.net>
-Installed-Size: 31422
+Installed-Size: 31425
 Depends: libc6 (>= 2.28), gnuplot-nox, fonts-open-sans
 Homepage: https://github.com/VKCOM/statshouse
 Priority: optional
 Section: misc
-Filename: pool/main/s/statshouse/statshouse-api_1.0.0-beta1-753-gcc567fa-bullseye_amd64.deb
-Size: 8701554
-SHA256: ae37854fcb337d6e60dc3832e8844b2a9e777a32243abadc8dade5fcdab41496
-SHA1: ed0496600942dde4fd815fb24a4973668ae447d3
-MD5sum: 6729c93fb2f20bbe63f174d1da0ec583
+Filename: pool/main/s/statshouse/statshouse-api_1.0.0-beta1-767-g3fed190-bullseye_amd64.deb
+Size: 8702488
+SHA256: 2fc0210f0798f6ba3c85cdf6667824052653658e3da8cab44bc8e1deec9af32c
+SHA1: a00ee732865767b10a3af8785137980c5c528b0e
+MD5sum: 765d0fb9e8f13bef68aa0583f89528b3
 Description: statshouse-api provides HTTP API and frontend for StatsHouse.
 
 Package: statshouse-metadata
 Source: statshouse
-Version: 1:1.0.0-beta1-753-gcc567fa-bullseye
+Version: 1:1.0.0-beta1-767-g3fed190-bullseye
 Architecture: amd64
 Maintainer: Gregory Petrosyan <pgregory@pgregory.net>
-Installed-Size: 9142
+Installed-Size: 5701
+Depends: libc6 (>= 2.29)
 Homepage: https://github.com/VKCOM/statshouse
 Priority: optional
 Section: misc
-Filename: pool/main/s/statshouse/statshouse-metadata_1.0.0-beta1-753-gcc567fa-bullseye_amd64.deb
-Size: 5225922
-SHA256: 65644dca22f3bb098a9baac818469efdcf95ce9de39e2bc39293e617158f9bc6
-SHA1: 82bc71efc0d366aa0d337f5656e4a17f44525bc0
-MD5sum: 7b4230093c9793a11a38056d2d2a98e4
+Filename: pool/main/s/statshouse/statshouse-metadata_1.0.0-beta1-767-g3fed190-bullseye_amd64.deb
+Size: 2180616
+SHA256: 1efdd4c2b0501877d6ca0acee2c0a7e5988a0d8096f99629932b77019985edf4
+SHA1: 5b349bd8329f505cba44f494173431867c7d33b9
+MD5sum: 8cdb90abc0adab167c0dff2638540f7f
 Description: statshouse-metadata provides storage of metadata for StatsHouse.
 

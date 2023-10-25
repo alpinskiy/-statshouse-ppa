@@ -1,19 +1,19 @@
 Origin: StatsHouse
 Label: StatsHouse
 Codename: bullseye
-Date: Thu, 19 Oct 2023 18:27:45 UTC
+Date: Wed, 25 Oct 2023 12:40:57 UTC
 Architectures: amd64
 Components: main
 Description: Apt repository for project StatsHouse
 MD5Sum:
- 53aecf6e5afd51bd65b922e259b9c403 1871 main/binary-amd64/Packages
- 3615364b4dd0f5123593beb64bebf075 747 main/binary-amd64/Packages.gz
+ c60df3a5d73eb4011fde3265bf94b9ef 1919 main/binary-amd64/Packages
+ 9837922aa91f37cfdb2f1b44b0171666 750 main/binary-amd64/Packages.gz
  380870c34a567486d1a7d5177449e2ff 124 main/binary-amd64/Release
 SHA1:
- bdc67ec9f5b086267e3403132272858302ddfb99 1871 main/binary-amd64/Packages
- 2d0f876759a3d9247418f80182f33a36a3327a07 747 main/binary-amd64/Packages.gz
+ 04de695feece0326ad5c560c8ce2f28b3bcf9176 1919 main/binary-amd64/Packages
+ 3ea24487a2661ff252d5d2647f32c9907ae26c0c 750 main/binary-amd64/Packages.gz
  7289a1a60ee8797669fb25ee37590b2ebaac36cc 124 main/binary-amd64/Release
 SHA256:
- 0080469139b7c1f82b188ca7b4eb90aa3c461b6a2bbd67f98f016dcbf8d42dac 1871 main/binary-amd64/Packages
- c49733e08405b02e377a5fb8c3045d3af878dae004b5eed1ae3cfe0234a2149b 747 main/binary-amd64/Packages.gz
+ 4dfbc58ab0b86b221a66bd4c5c2f235e8398cc658635058bbc00165f00bb946d 1919 main/binary-amd64/Packages
+ 0f420ed36ba0d09aa914a170dec27a446ce2d0c5ff29114ecd81616bfc907490 750 main/binary-amd64/Packages.gz
  5c4a39c4c9c289339cde5de92791f3492fca7d7de42fff66cc8a0f8d3ad27d46 124 main/binary-amd64/Release

@@ -1,48 +1,50 @@
 Package: statshouse
-Version: 1:1.0.0-beta1-753-gcc567fa-jammy
+Version: 1:1.0.0-beta1-767-g3fed190-jammy
 Architecture: amd64
 Maintainer: Gregory Petrosyan <pgregory@pgregory.net>
-Installed-Size: 29830
+Installed-Size: 20769
+Depends: libc6 (>= 2.34)
 Homepage: https://github.com/VKCOM/statshouse
 Priority: optional
 Section: misc
-Filename: pool/main/s/statshouse/statshouse_1.0.0-beta1-753-gcc567fa-jammy_amd64.deb
-Size: 13443362
-SHA256: ae78cffbbaaef4ce37aca2389531b2cc05d695aacdf2d32255e110e11493fa9b
-SHA1: 69ec64a33d0ae40e0390b11bdcadfcc518b18e1e
-MD5sum: 1149b1f7c892ce5afb34ccd069d9d799
-Description: statshouse provides the Agent daemon of the StatsHouse monitoring system.
+Filename: pool/main/s/statshouse/statshouse_1.0.0-beta1-767-g3fed190-jammy_amd64.deb
+Size: 6014660
+SHA256: 54d6122b11904c87f3d339df356c254bfac731adff186ad337056ea11ee8fb6d
+SHA1: 55e5502d582f15019f56ad4f2b92cd08cc0b9356
+MD5sum: d0645d8a6cbd9e4f2341ee8eaab8739d
+Description: statshouse provides the main daemon of the StatsHouse monitoring system.
 
 Package: statshouse-api
 Source: statshouse
-Version: 1:1.0.0-beta1-753-gcc567fa-jammy
+Version: 1:1.0.0-beta1-767-g3fed190-jammy
 Architecture: amd64
 Maintainer: Gregory Petrosyan <pgregory@pgregory.net>
-Installed-Size: 31462
+Installed-Size: 31469
 Depends: libc6 (>= 2.34), gnuplot-nox, fonts-open-sans
 Homepage: https://github.com/VKCOM/statshouse
 Priority: optional
 Section: misc
-Filename: pool/main/s/statshouse/statshouse-api_1.0.0-beta1-753-gcc567fa-jammy_amd64.deb
-Size: 8706256
-SHA256: 8fbe4cda01a639817d263b7beeed2a071b02cfc94d4cf36cca572a9ad75b524d
-SHA1: 8ad53c026e5fefd9f1e0fcb256c10cc1a4f9a684
-MD5sum: 3e5c9d6e3b0c38a686f4ccd1d51d4a93
+Filename: pool/main/s/statshouse/statshouse-api_1.0.0-beta1-767-g3fed190-jammy_amd64.deb
+Size: 8709214
+SHA256: be080d01ff36de7644c015c880007d25f30f567ee0764781159638eacfa1185f
+SHA1: 7b5baa780dd43deb54dc45873b8aeec41dd4f898
+MD5sum: 3be67a12204f6eb2cdce9f94418c4b9f
 Description: statshouse-api provides HTTP API and frontend for StatsHouse.
 
 Package: statshouse-metadata
 Source: statshouse
-Version: 1:1.0.0-beta1-753-gcc567fa-jammy
+Version: 1:1.0.0-beta1-767-g3fed190-jammy
 Architecture: amd64
 Maintainer: Gregory Petrosyan <pgregory@pgregory.net>
-Installed-Size: 9211
+Installed-Size: 5737
+Depends: libc6 (>= 2.34)
 Homepage: https://github.com/VKCOM/statshouse
 Priority: optional
 Section: misc
-Filename: pool/main/s/statshouse/statshouse-metadata_1.0.0-beta1-753-gcc567fa-jammy_amd64.deb
-Size: 5271166
-SHA256: 27a9933980ebd2c95f67c2e4fbfa85843c418cd75f7555438464fa7b88b0cf3b
-SHA1: 4c3aaccccef0bc1acae539a33d7dbdfa13f9e611
-MD5sum: e7df1aacc6d636200bee41654236a899
+Filename: pool/main/s/statshouse/statshouse-metadata_1.0.0-beta1-767-g3fed190-jammy_amd64.deb
+Size: 2188140
+SHA256: ca94f4bb53acb5be8e5a882e476e883fa21424e8ee621e0435fd65b1ef34feca
+SHA1: ef26b83996b8c31734cc9ddb039a84b8d0449456
+MD5sum: 6a800848dba58ac32157cca58d3db44e
 Description: statshouse-metadata provides storage of metadata for StatsHouse.
 
