@@ -73,6 +73,7 @@ jobs:
         with:
           name: statshouse-${{inputs.build_version}}-${{inputs.os_name}}_${{inputs.os_release}}_amd64-bin
           path: target
+      - run: chmod +x target/*
       - uses: actions/download-artifact@master
         with:
           name: statshouse-${{inputs.build_version}}-ui
